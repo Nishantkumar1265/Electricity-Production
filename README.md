@@ -25,12 +25,12 @@ import numpy as np
 def split_sequence(sequence, n_steps):
     x, y = [], []
     for i in range(len(sequence)):
-        # find the end of this pattern
+# find the end of this pattern
         end_idx = i + n_steps
-        # check if we are beyond the sequence
+# check if we are beyond the sequence
         if end_idx > len(sequence) - 1:
             break
-        # gather input and output parts of the pattern
+# gather input and output parts of the pattern
         seq_x = sequence[i:end_idx]
         seq_y = sequence[end_idx]
         x.append(seq_x)
